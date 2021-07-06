@@ -14,8 +14,6 @@
 
         margin: 0;
         padding: 0;
-
-        font-size: 1.125rem;
       }
 
       body {
@@ -31,7 +29,7 @@
       }
 
       body > * {
-        max-width: 60ch;
+        max-width: 70ch;
         width: 100%;
 
         margin: 3rem auto;
@@ -43,14 +41,14 @@
 
       h1, h2 {
         margin-top: 1rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
 
         font-family: "Inter", "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
         line-height: 1.25;
       }
 
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
       }
 
       h2 {
@@ -61,13 +59,16 @@
         margin-top: 0;
         margin-bottom: 1rem;
 
-        font-size: 1rem;
         line-height: 1.5;
       }
 
       a {
         color: #0076df;
         text-decoration: none;
+      }
+
+      a h1, a h2 {
+        color: #111111;
       }
 
       a:hover {
@@ -83,6 +84,24 @@
 
         border-radius: 0.25rem;
       }
+      
+      .link > * {
+        margin-right: 0.5rem;
+        display: inline-block;
+      }
+
+      .link img[alt="link"] {
+        visibility: hidden;
+      }
+
+      .link:hover img[alt="link"] {
+        visibility: visible;
+      }
+
+      img[alt="link"] {
+        width: 1rem;
+        height: 1rem;
+      }
     </style>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,8 +116,11 @@
       <a href="https://other.respdev.com/">respdev.com</a>
     </nav>
 
-    <section>
-      <h1>About me</h1>
+    <section id="about-me">
+      <a class="link" href="#about-me">
+        <h1>About me</h1>
+        <img src="assets/link.svg" alt="link">
+      </a>
 
       <p>
         Hey there! I'm <b>Leon</b> and I write <i>stuff</i>. Quite a lot of
